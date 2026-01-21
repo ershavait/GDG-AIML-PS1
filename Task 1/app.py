@@ -3,7 +3,7 @@ import pandas as pd
 import yfinance as yf
 import matplotlib.pyplot as plt
 from statsmodels.tsa.arima.model import ARIMA
-import warnings
+import warnings 
 
 warnings.filterwarnings("ignore")
 
