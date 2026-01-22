@@ -21,9 +21,17 @@ It can fetch stock prices, read finance/news updates, store context using a vect
 
 ---
 
-## Installation
-Run the following commands:
+## How to Run
 
-```bash
-pip install -U chromadb yfinance pandas feedparser groq
-pip install scipy sentence-transformers rfc3987
+1. Open the project folder in VS Code / Jupyter / Colab.
+2. Open the notebook file:
+   - `chatbotgroqapi.ipynb`
+3. Install required libraries by running the installation cell (or use terminal):
+
+   ```bash
+   pip install -U chromadb yfinance pandas feedparser groq
+   pip install scipy sentence-transformers rfc3987
+
+4. Add your **Groq API key** in the notebook where required.
+5. Run all cells in order (top to bottom).
+6. Enter your finance queries (stocks/news) and check the output responses.
