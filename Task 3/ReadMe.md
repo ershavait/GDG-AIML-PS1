@@ -37,12 +37,12 @@ pip install pandas requests websockets
 # 2) Run backfill (creates historical CSV)
 python backfill.py
 # This will create:
-# data/BTCUSDT_1m.csv  :contentReference[oaicite:0]{index=0}
+# data/BTCUSDT_1m.csv  
 
 # 3) Run live stream (updates CSV continuously)
 python live_stream_save.py
 # This will connect to Binance WebSocket and keep appending closed 1-minute candles
-# into the same CSV file  :contentReference[oaicite:1]{index=1}
+# into the same CSV file   
 
 # 4) Stop live streaming
 # Press: CTRL + C
