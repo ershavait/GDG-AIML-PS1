@@ -5,19 +5,14 @@ import pandas as pd
 from datetime import datetime
 import websockets
 
-# =========================
 # CONFIG
-# =========================
 CSV_PATH = "data/BTCUSDT_1m.csv"
 SYMBOL = "btcusdt"
 INTERVAL = "1m"
 
 WS_URL = f"wss://stream.binance.com:9443/ws/{SYMBOL}@kline_{INTERVAL}"
 
-
-# =========================
 # LOAD CSV
-# =========================
 def load_csv():
     if not os.path.exists(CSV_PATH):
         raise FileNotFoundError("❌ CSV not found. Run backfill.py first!")
@@ -32,10 +27,7 @@ def load_csv():
 
     return df
 
-
-# =========================
 # APPEND + SAVE CSV
-# =========================
 def append_and_save(df, new_row):
     df = pd.concat([df, new_row], ignore_index=True)
 
@@ -53,9 +45,7 @@ def append_and_save(df, new_row):
     return df
 
 
-# =========================
 # WEBSOCKET STREAM
-# =========================
 async def stream_and_save():
     df = load_csv()
     print("✅ Loaded existing CSV rows:", len(df))
